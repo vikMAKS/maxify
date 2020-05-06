@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #222222; }
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-family: 'Montserrat';
+  padding-left: 15px; }
+
+.player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 25px;
+  color: white;
+  font-family: 'Roboto';
+  text-transform: lowercase;
+  background-color: #313030;
+  padding-left: 15px;
+  padding-right: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin-top: 21px; }
+
+.lmg {
+  width: 100%;
+  height: 400px; }
+
+.topic {
+  padding-left: 30px;
+  color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(images/land.jpg);
+  background-clip: text;
+  -webkit-background-clip: text; }
+
+.songs {
+  margin-left: 15px;
+  margin-right: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-row-gap: 10px; }
+
+.song {
+  width: 150px;
+  height: 170px;
+  background-color: black;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.simg {
+  width: 150px;
+  height: 100px; }
+
+.tit {
+  color: white;
+  font-family: 'Roboto';
+  margin-left: 4px;
+  margin-top: 5px; }
+
+.sub {
+  color: white;
+  font-family: 'Montserrat';
+  margin-top: 3px;
+  margin-left: 7px;
+  font-size: 12px;
+  font-weight: 400; }
+
+.song:hover {
+  animation: play 0.3s ease-in-out; }
+
+.sidenav {
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  color: white;
+  display: none;
+  animation: intro 0.17s ease-in-out; }
+
+.top {
+  font-family: 'Roboto';
+  padding-left: 15px;
+  width: 180px;
+  height: 60px;
+  line-height: 30px; }
+
+.content {
+  position: absolute;
+  top: 50%; }
+
+.content a {
+  display: block;
+  width: 180px;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-family: 'Roboto';
+  color: white;
+  font-size: 19px;
+  height: 50px;
+  line-height: 25px; }
+
+.content a:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: dodgerblue;
+  animation: boom 0.2s ease-in-out; }
+
+@keyframes play {
+  0% {
+    transform: scale(0.7); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+@keyframes boom {
+  0% {
+    transform: scale(0.7); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+@keyframes intro {
+  0% {
+    transform: scale(0.2);
+    background-color: #474646; }
+  50% {
+    transform: scale(0.8);
+    background-color: #2c2b2b; }
+  100% {
+    transform: scale(1);
+    background-color: black; } }
+@keyframes int {
+  0% {
+    transform: scale(0.8);
+    background-color: #474646; }
+  50% {
+    transform: scale(0.9);
+    background-color: #2c2b2b; }
+  100% {
+    transform: scale(1);
+    background-color: black; } }
+@media only screen and (max-width: 900px) {
+  .songs {
+    grid-template-columns: auto auto; }
+
+  .lmg {
+    height: 280px; } }
+@media only screen and (max-width: 1200px) {
+  .sidenav {
+    width: 100%;
+    animation: int 0.13s ease-in-out; }
+
+  .content {
+    padding-left: 50px;
+    top: 40%; } }
+
+/*# sourceMappingURL=style.css.map */

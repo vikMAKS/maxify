@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Maxify</title>
+</head>
+<body>
+    <div class="land">
+        <div class="header">
+            <p><i class="fa fa-bars" onclick="toggle()"></i> Maxify</p>
+        </div>
+        <img src="images/land.jpg" class="lmg" />
+    </div>
+    <div class="sidenav">
+        <div class="top">
+            <p><i class="fa fa-bars" onclick="toggle()"></i> Maxify</p>
+        </div>
+        <div class="content">
+            <a href="" class="link"><i class="fa fa-home"></i>    Home</a>
+            <a href="" class="link"><i class="fa fa-bell"></i>    Songs</a>
+        </div>
+    </div>
+    <div class="popular">
+        <h3 class="topic">Popular now</h3>
+        <div class="songs">
+            <div class="song one" onclick="play('images/land.jpg', 'Shape of you')">
+                <img src="images/land.jpg" class="simg" />
+                <p class="tit">Shape of you</p>
+                <p class="sub">3:15</p>
+            </div>
+            <div class="song two" onclick="play('images/song2.jpg', 'Faded')">
+                <img src="images/song2.jpg" class="simg" />
+                <p class="tit">Faded</p>
+                <p class="sub">3:34</p>
+            </div>
+            <div class="song two" onclick="play('images/land.jpg', 'Shape of you')">
+                <img src="images/land.jpg" class="simg" />
+                <p class="tit">Shape of you</p>
+                <p class="sub">3:15</p>
+            </div>
+            <div class="song two" onclick="play('images/song2.jpg', 'Faded')">
+                <img src="images/song2.jpg" class="simg" />
+                <p class="tit">Faded</p>
+                <p class="sub">3:34</p>
+            </div>
+        </div>
+    </div>
+    <div class="player">
+        <p class="now">Shape of you</p>
+        <audio controls autoplay>
+            <source src="images/land.jpg" type="audio/ogg">
+        </audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
