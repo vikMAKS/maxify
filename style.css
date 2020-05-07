@@ -88,6 +88,22 @@ body {
   display: none;
   animation: intro 0.17s ease-in-out; }
 
+.song:hover .tit {
+  color: #06c406;
+  text-shadow: 1px 3px 8px #02ff02; }
+.song:hover .simg {
+  filter: saturate(4); }
+
+.now {
+  word-spacing: 2px; }
+
+.butts {
+  float: right;
+  margin-right: 75px; }
+  .butts i {
+    font-size: 18px;
+    padding-right: 3px; }
+
 .top {
   font-family: 'Roboto';
   padding-left: 15px;
