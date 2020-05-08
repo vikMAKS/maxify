@@ -1,14 +1,22 @@
+:root {
+  --text: white;
+  --bg: rgb(34, 34, 34);
+  --card: black;
+  --player: rgb(49, 48, 48);
+  --hover: dodgerblue;
+  --shad: rgba(0, 0, 0, 0.4); }
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #222222; }
+  background-color: var(--bg); }
 
 .header {
   position: fixed;
   width: 100%;
   height: 60px;
   background-color: rgba(0, 0, 0, 0.4);
-  color: white;
+  color: var(--text);
   font-family: 'Montserrat';
   padding-left: 15px; }
 
@@ -18,10 +26,10 @@ body {
   width: 100%;
   height: 50px;
   line-height: 25px;
-  color: white;
+  color: var(--text);
   font-family: 'Roboto';
   text-transform: lowercase;
-  background-color: #313030;
+  background-color: var(--player);
   padding-left: 15px;
   padding-right: 6px;
   border-top-left-radius: 6px;
@@ -50,7 +58,7 @@ body {
 .song {
   width: 150px;
   height: 170px;
-  background-color: black;
+  background-color: var(--card);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px; }
 
@@ -59,7 +67,7 @@ body {
   height: 100px; }
 
 .tit {
-  color: white;
+  color: var(--text);
   font-family: 'Roboto';
   margin-left: 4px;
   margin-top: 5px; }
@@ -82,9 +90,9 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: var(--card);
   overflow-x: hidden;
-  color: white;
+  color: var(--text);
   display: none;
   animation: intro 0.17s ease-in-out; }
 
@@ -122,14 +130,14 @@ body {
   margin-bottom: 20px;
   text-decoration: none;
   font-family: 'Roboto';
-  color: white;
+  color: var(--text);
   font-size: 19px;
   height: 50px;
   line-height: 25px; }
 
 .content a:hover {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: dodgerblue;
+  background-color: var(--shad);
+  color: var(--hover);
   animation: boom 0.2s ease-in-out; }
 
 @keyframes play {
@@ -148,31 +156,32 @@ body {
     transform: scale(1); } }
 @keyframes intro {
   0% {
-    transform: scale(0.2);
-    background-color: #474646; }
+    transform: scale(0.2); }
   50% {
-    transform: scale(0.8);
-    background-color: #2c2b2b; }
+    transform: scale(0.8); }
   100% {
-    transform: scale(1);
-    background-color: black; } }
+    transform: scale(1); } }
 @keyframes int {
   0% {
-    transform: scale(0.8);
-    background-color: #474646; }
+    transform: scale(0.8); }
   50% {
-    transform: scale(0.9);
-    background-color: #2c2b2b; }
+    transform: scale(0.9); }
   100% {
-    transform: scale(1);
-    background-color: black; } }
+    transform: scale(1); } }
+@keyframes addin {
+  0% {
+    opacity: 0;
+    transform: scaleX(1.01); }
+  100% {
+    opacity: 1;
+    transform: scaleX(1); } }
 @media only screen and (max-width: 900px) {
   .songs {
     grid-template-columns: auto auto; }
 
   .lmg {
     height: 280px; } }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1005px) {
   .sidenav {
     width: 100%;
     animation: int 0.13s ease-in-out; }
